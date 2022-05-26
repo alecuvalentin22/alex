@@ -12,18 +12,18 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class CustomAdapter extends ArrayAdapter<Car> {
+public class CustomAdapter extends ArrayAdapter<City> {
 
     private Context context;
     private int resource;
-    private List<Car> carList;
+    private List<City> cityList;
     private LayoutInflater layoutInflater;
 
-    public CustomAdapter(@NonNull Context context, int resource, List<Car> list, LayoutInflater layoutInflater) {
+    public CustomAdapter(@NonNull Context context, int resource, List<City> list, LayoutInflater layoutInflater) {
         super(context, resource, list);
         this.context = context;
         this.resource = resource;
-        this.carList = list;
+        this.cityList = list;
         this.layoutInflater = layoutInflater;
     }
 
@@ -32,24 +32,18 @@ public class CustomAdapter extends ArrayAdapter<Car> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View view = layoutInflater.inflate(resource, parent, false);
-        Car car = carList.get(position);
+        City city = cityList.get(position);
 
-        if (car!=null)
+        if (city!=null)
         {
-            TextView tv1 = view.findViewById(R.id.tvBrand);
-            tv1.setText(car.getBrand());
+            TextView tv1 = view.findViewById(R.id.tvName);
+            tv1.setText(city.getName());
 
-            TextView tv2 = view.findViewById(R.id.tvDate);
-            tv2.setText(car.getManufacturingDate().toString());
+            TextView tv2 = view.findViewById(R.id.tvCountry);
+            tv2.setText(city.getCountry());
 
-            TextView tv3 = view.findViewById(R.id.tvColour);
-            tv3.setText(car.getColour());
-
-            TextView tv4 = view.findViewById(R.id.tvPrice);
-            tv4.setText(String.valueOf(car.getPrice()));
-
-            TextView tv5 = view.findViewById(R.id.tvEngineType);
-            tv5.setText(car.getEngineType());
+            TextView tv3 = view.findViewById(R.id.tvPlaces);
+            tv3.setText(city.getPlaces().toString());
         }
         return view;
     }
