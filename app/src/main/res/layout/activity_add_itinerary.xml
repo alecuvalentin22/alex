@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItineraryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonRecommended"
+            android:layout_width="349dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/get_recommended_itinerary" />
+
+        <EditText
+            android:id="@+id/editTextItineraryName"
+            android:layout_width="371dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/type_in_the_itinerary_name"/>
+
+
+        <Spinner
+            android:id="@+id/spinnerTransport"
+            android:layout_width="366dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+
+        <Switch
+            android:id="@+id/switchRecomm"
+            android:layout_width="wrap_content"
+            android:text="@string/switch_string"
+            android:textSize="15sp"
+            android:padding="20dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/descriptionProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drag the bar based on how excited you are :) "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"/>
+
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:padding="15dp"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/textViewProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"/>
+
+
+        <DatePicker
+            android:id="@+id/datePickerItinerary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:spinnersShown="true"/>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <CheckBox
+                android:id="@+id/cbLoc1"
+                android:layout_width="wrap_content"
+                android:text="Bucharest Botanical Garden"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc2"
+                android:layout_width="wrap_content"
+                android:text="Cotroceni Museum"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc3"
+                android:layout_width="wrap_content"
+                android:text="Parliament Palace"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc4"
+                android:layout_width="wrap_content"
+                android:text="Romanian Athenaeum"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc5"
+                android:layout_width="wrap_content"
+                android:text="Stavropoleos Church"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc6"
+                android:layout_width="wrap_content"
+                android:text="Bucharest Village Museum"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc7"
+                android:layout_width="wrap_content"
+                android:text="Old Town and Macca-Villacrosse Passage"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc8"
+                android:layout_width="wrap_content"
+                android:text="The fountains in Unirii Square"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc9"
+                android:layout_width="wrap_content"
+                android:text="Spring Palace"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc10"
+                android:layout_width="wrap_content"
+                android:text="Kitsch Museum"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cbLoc11"
+                android:layout_width="wrap_content"
+                android:text="Comana Natural Park"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="349dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="60dp"
+            android:text="save_data" />
+    </LinearLayout>
+
+</ScrollView>

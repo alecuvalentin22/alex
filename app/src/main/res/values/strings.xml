@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Tourism Application</string>
+    <string name="travel_through_bucharest">Travel through Bucharest</string>
+    <string name="analytics">Analytics</string>
+    <string name="show_list_of_famous_places">Show list of famous places</string>
+    <string name="type_in_the_itinerary_name">Type in the itinerary name</string>
+    <string name="switch_string">Do you want to get personalized recommendations based on the visited places</string>
+    <string name="get_recommended_itinerary">Get recommended itinerary</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="create_your_itinerary">Create your itinerary</string>
+    <string name="show_itineraries">Show itineraries</string>
+</resources>
