@@ -8,10 +8,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FamousPlacesActivity extends AppCompatActivity {
 
@@ -20,27 +23,28 @@ public class FamousPlacesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_famous_places);
 
+        List<City> cityList = new ArrayList<>();
+        ListView listView = findViewById(R.id.listView);
+
         ExtractJSON extractJSON = new ExtractJSON(){
 
             @Override
             protected void onPostExecute(String s) {
 
-                carList.addAll(this.listOfCarsJSON);
+                cityList.addAll(this.listOfCities);
 
-                CustomAdapter adapter = new CustomAdapter(getApplicationContext(), R.layout.elemenlistview, carList, getLayoutInflater())
+                CustomAdapter adapter = new CustomAdapter(getApplicationContext(), R.layout.elemenlistview, cityList, getLayoutInflater())
                 {
                     @NonNull
                     @Override
                     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                         View view = super.getView(position, convertView, parent);
 
-                        Car car1 = carList.get(position);
+                        City city = cityList.get(position);
 
-                        TextView tvPrice = view.findViewById(R.id.tvPrice);
-                        if(car1.getPrice() > 20000)
-                            tvPrice.setTextColor(Color.RED);
-                        else
-                            tvPrice.setTextColor(Color.GREEN);
+                        TextView tvName = view.findViewById(R.id.tvName);
+                        TextView tvCountry = view.findViewById(R.id.tvCountry);
+                        TextView tvPlaces = view.findViewById(R.id.tvPlaces);
 
                         return view;
                     }

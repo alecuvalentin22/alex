@@ -68,7 +68,7 @@ public class Homepage extends AppCompatActivity {
         showFamousPlacesIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AddItineraryActivity.class);
+                Intent intent = new Intent(getApplicationContext(), FamousPlacesActivity.class);
                 startActivity(intent);
             }
         });

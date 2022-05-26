@@ -19,9 +19,9 @@ import java.util.List;
 
 public class ExtractJSON extends AsyncTask<URL, Void, String> {
 
-    public List<Car> listOfCarsJSON = new ArrayList<>();
+    public List<City> listOfCities = new ArrayList<>();
 
-    JSONArray cars = null;
+    JSONArray cities = null;
 
     @Override
     protected String doInBackground(URL... urls) {
@@ -63,20 +63,39 @@ public class ExtractJSON extends AsyncTask<URL, Void, String> {
             }
 
             try {
-                cars = jsonObject.getJSONArray("cars");
+                cities = jsonObject.getJSONArray("Cities");
 
-                for(int i=0;i<cars.length();i++)
+                for(int i=0;i<cities.length();i++)
                 {
-                    JSONObject object = cars.getJSONObject(i);
+                    JSONObject object = cities.getJSONObject(i);
 
-                    String brand = object.getString("brand");
-                    Date manufacturingDate = new Date(object.getString("manufacturingDate"));
-                    String colour = object.getString("colour");
-                    int price = Integer.parseInt(object.getString("price"));
-                    String engineType = object.getString("engineType");
+                    String name = object.getString("name");
+                    String country = object.getString("country");
+                    JSONArray places = object.getJSONArray("places");
+                    List<Place> placesList = new ArrayList<>();
 
-                    Car car = new Car(brand, manufacturingDate, colour, price, engineType);
-                    listOfCarsJSON.add(car);
+                    for(int j=0;j<places.length();j++) {
+
+                        JSONObject placesJSONObject = places.getJSONObject(j);
+                        String placeName = placesJSONObject.getString("name");
+                        JSONArray transport = placesJSONObject.getJSONArray("transport");
+                        List<Transport> transportList = new ArrayList<>();
+                        for(int k=0;k<transport.length();k++) {
+
+                            JSONObject jsonObject1 = transport.getJSONObject(k);
+                            String station = jsonObject1.getString("station");
+                            String transportType = jsonObject1.getString("transporType");
+
+                            Transport transport1 = new Transport(station, transportType);
+                            transportList.add(transport1);
+                        }
+
+                        Place place = new Place(placeName, transportList);
+                        placesList.add(place);
+                    }
+
+                    City city = new City(name, country, placesList);
+                    listOfCities.add(city);
                 }
 
             } catch (JSONException e) {
