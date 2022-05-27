@@ -1,7 +1,5 @@
 package com.example.mytourismapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class ViewDB extends Activity {
+public class ViewBusTravels extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +27,8 @@ public class ViewDB extends Activity {
         ll.setOrientation(LinearLayout.VERTICAL);
 
         ItinerariesDB database = ItinerariesDB.getInstance(getApplicationContext());
-        List<Itinerary> itineraries = database.getItinerariesDAO().getAll();
         //SEARCH BY TRANSPORT
-        //List<Itinerary> itineraries = database.getItinerariesDAO().searchByTransport("Bus");
+        List<Itinerary> itineraries = database.getItinerariesDAO().searchByTransport("Bus");
 
         ArrayAdapter<Itinerary> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, itineraries);
 
@@ -46,7 +43,7 @@ public class ViewDB extends Activity {
 
                 ArrayAdapter adapter = (ArrayAdapter) lv.getAdapter();
 
-                AlertDialog dialog = new AlertDialog.Builder(ViewDB.this)
+                AlertDialog dialog = new AlertDialog.Builder(ViewBusTravels.this)
                         .setTitle("Delete confirmation")
                         .setMessage("Are you sure?")
                         .setNegativeButton("NO", new DialogInterface.OnClickListener() {
@@ -77,7 +74,7 @@ public class ViewDB extends Activity {
         });
 
         TextView tv1 = new TextView(this);
-        tv1.setText("List of itineraries from the database:"+"\n");
+        tv1.setText("List of bus itineraries from the database:"+"\n");
 
 
         ll.addView(tv1);

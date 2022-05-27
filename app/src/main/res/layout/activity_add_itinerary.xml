@@ -11,13 +11,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonRecommended"
-            android:layout_width="349dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/get_recommended_itinerary" />
 
         <EditText
             android:id="@+id/editTextItineraryName"
@@ -50,7 +43,7 @@
             android:id="@+id/descriptionProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Drag the bar based on how excited you are :) "
+            android:text="@string/drag_the_bar_based_on_how_excited_you_are"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_gravity="center"
@@ -78,7 +71,7 @@
             android:id="@+id/textViewProgress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0%"
+            android:text="@string/_0"
             android:textSize="30sp"
             android:layout_gravity="center"
             android:paddingBottom="10dp"
@@ -102,57 +95,57 @@
             <CheckBox
                 android:id="@+id/cbLoc1"
                 android:layout_width="wrap_content"
-                android:text="Bucharest Botanical Garden"
+                android:text="@string/bucharest_botanical_garden"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc2"
                 android:layout_width="wrap_content"
-                android:text="Cotroceni Museum"
+                android:text="@string/cotroceni_museum"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc3"
                 android:layout_width="wrap_content"
-                android:text="Parliament Palace"
+                android:text="@string/parliament_palace"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc4"
                 android:layout_width="wrap_content"
-                android:text="Romanian Athenaeum"
+                android:text="@string/romanian_athenaeum"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc5"
                 android:layout_width="wrap_content"
-                android:text="Stavropoleos Church"
+                android:text="@string/stavropoleos_church"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc6"
                 android:layout_width="wrap_content"
-                android:text="Bucharest Village Museum"
+                android:text="@string/bucharest_village_museum"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc7"
                 android:layout_width="wrap_content"
-                android:text="Old Town and Macca-Villacrosse Passage"
+                android:text="@string/old_town_and_macca_villacrosse_passage"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc8"
                 android:layout_width="wrap_content"
-                android:text="The fountains in Unirii Square"
+                android:text="@string/the_fountains_in_unirii_square"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc9"
                 android:layout_width="wrap_content"
-                android:text="Spring Palace"
+                android:text="@string/spring_palace"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc10"
                 android:layout_width="wrap_content"
-                android:text="Kitsch Museum"
+                android:text="@string/kitsch_museum"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/cbLoc11"
                 android:layout_width="wrap_content"
-                android:text="Comana Natural Park"
+                android:text="@string/comana_natural_park"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
@@ -163,7 +156,9 @@
             android:layout_height="49dp"
             android:layout_marginStart="36dp"
             android:layout_marginTop="60dp"
-            android:text="save_data" />
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/save_itinerary" />
     </LinearLayout>
 
 </ScrollView>

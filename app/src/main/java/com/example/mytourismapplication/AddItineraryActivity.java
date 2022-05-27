@@ -2,6 +2,7 @@ package com.example.mytourismapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -168,6 +169,7 @@ public class AddItineraryActivity extends AppCompatActivity {
                 User user = new User(_username);
                 database.getUsersDAO().insert(user);
                 Toast.makeText(getApplicationContext(), "Successfully saved in Room DB for user " +user.getName(), Toast.LENGTH_LONG).show();
+
 
             }
         });

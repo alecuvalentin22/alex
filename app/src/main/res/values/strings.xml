@@ -9,4 +9,24 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="create_your_itinerary">Create your itinerary</string>
     <string name="show_itineraries">Show itineraries</string>
+    <string name="update_this_user">Update this user?</string>
+    <string name="username">userName</string>
+    <string name="enter_new_name">enter new name</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="drag_the_bar_based_on_how_excited_you_are">Drag the bar based on how excited you are :)</string>
+    <string name="_0">0%</string>
+    <string name="bucharest_botanical_garden">Bucharest Botanical Garden</string>
+    <string name="cotroceni_museum">Cotroceni Museum</string>
+    <string name="parliament_palace">Parliament Palace</string>
+    <string name="romanian_athenaeum">Romanian Athenaeum</string>
+    <string name="stavropoleos_church">Stavropoleos Church</string>
+    <string name="bucharest_village_museum">Bucharest Village Museum</string>
+    <string name="old_town_and_macca_villacrosse_passage">Old Town and Macca-Villacrosse Passage</string>
+    <string name="the_fountains_in_unirii_square">The fountains in Unirii Square</string>
+    <string name="spring_palace">Spring Palace</string>
+    <string name="kitsch_museum">Kitsch Museum</string>
+    <string name="comana_natural_park">Comana Natural Park</string>
+    <string name="save_itinerary">Save itinerary</string>
+    <string name="enter_name">Enter name</string>
 </resources>

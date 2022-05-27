@@ -7,11 +7,12 @@ import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(tableName = "itineraries")
-public class Itinerary {
+public class Itinerary implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private int id;

@@ -14,10 +14,16 @@ public interface UsersDAO {
     long insert(User user);
 
     @Query("select * from users")
-    List<User> getAll();
+    List<User> getAllUsers();
 
     @Query("delete from users")
     void deleteAll();
+
+    @Query("SELECT * FROM users WHERE name = :name")
+    User getByName(String name);
+
+    @Query("UPDATE users SET name=:givenName WHERE name = :existingName")
+    void update(String givenName, String existingName);
 
     @Delete
     void delete(User user);

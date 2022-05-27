@@ -4,18 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/alex_albu/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2855" />
+        <entry key="..\:/alex_albu/app/src/main/res/drawable/custom_button.xml" value="0.196" />
         <entry key="..\:/alex_albu/app/src/main/res/drawable/gradient.xml" value="0.2945" />
         <entry key="..\:/alex_albu/app/src/main/res/drawable/header_background.xml" value="0.2945" />
         <entry key="..\:/alex_albu/app/src/main/res/drawable/ic_analytics.xml" value="0.196" />
         <entry key="..\:/alex_albu/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2855" />
         <entry key="..\:/alex_albu/app/src/main/res/drawable/whilte_square_background.xml" value="0.196" />
         <entry key="..\:/alex_albu/app/src/main/res/layout/activity_add_itinerary.xml" value="0.3104041272570937" />
+        <entry key="..\:/alex_albu/app/src/main/res/layout/activity_bar_chart.xml" value="0.18802083333333333" />
         <entry key="..\:/alex_albu/app/src/main/res/layout/activity_famous_places.xml" value="0.18802083333333333" />
         <entry key="..\:/alex_albu/app/src/main/res/layout/activity_homepage.xml" value="0.2" />
         <entry key="..\:/alex_albu/app/src/main/res/layout/activity_main.xml" value="0.34556159420289856" />
+        <entry key="..\:/alex_albu/app/src/main/res/layout/activity_profile.xml" value="0.18802083333333333" />
+        <entry key="..\:/alex_albu/app/src/main/res/layout/elemenlistview.xml" value="0.18802083333333333" />
+        <entry key="..\:/alex_albu/app/src/main/res/layout/update_user_dialog.xml" value="0.18802083333333333" />
         <entry key="..\:/alex_albu/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
-        <entry key="app/src/main/res/layout/activity_famous_places.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/elemenlistview.xml" value="0.35520833333333335" />
       </map>
     </option>
   </component>
